@@ -1,0 +1,210 @@
+#content {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    .content-list {
+        width: 100%;
+        overflow: hidden;
+    }
+    .content-item {
+        width: 100%;
+        float: left;
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+}
+
+// basic-data
+#basic-data {
+    .basic-data {
+        .area-01 {
+            text-align: center;
+            position: relative;
+            padding-top: 30px;
+            .num {
+                font-size: 30px;
+                font-weight: bold;
+                text-align: center;
+                position: relative;
+                .minute {
+                    width: 40px;
+                    text-align: center;
+                    font-size: 10px;
+                    font-weight: lighter;
+                    position: absolute;
+                    bottom: 6px;
+                    left: 100%;
+                }
+            }
+            .total-training {
+                position: absolute;
+                top: 0.5em;
+                left: 15px;
+                font-size: 13px;
+            }
+            .total-trainning-btn {
+                position: absolute;
+                top: 0.5em;
+                right: 15px;
+                width: 13px;
+                height: 13px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 100% 100%;
+            }
+        }
+        .area-02-list {
+            margin: 15px 0;
+            padding: 0 15px;
+            .area-02-item {
+                width: 33%;
+                float: left;
+                .name {
+                    font-size: 10px;
+                    margin-bottom: 5px;
+                }
+                .count {
+                    font-weight: bolder;
+                    .unit {
+                        font-weight: lighter;
+                        font-size: 10px;
+                    }
+                }
+            }
+            .item-left {
+                text-align: left;
+            }
+            .item-center {
+                text-align: center;
+            }
+            .item-right {
+                text-align: right;
+            }
+        }
+        .area-03 {
+            border-top: 1px solid #eee;
+            height: 50px;
+            position: relative;
+            .ranking-text {
+                position: absolute;
+                top: 50%;
+                left: 15px;
+                margin-top: -20px;
+                line-height: 40px;
+                font-size: 12px;
+                span {
+                    color: #999966;
+                    font-size: 15px;
+                    font-weight: bolder;
+                    margin-right: 4px;
+                }
+            }
+            .head-img-box {
+                position: absolute;
+                top: 50%;
+                width: 30px;
+                height: 30px;
+                margin-top: -16px;
+                border: 1px solid #ddd;
+                border-radius: 50%;
+                overflow: hidden;
+                .head-img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .prev-friend {
+                right: 65px;
+                z-index: 3;
+            }
+            .me {
+                right: 40px;
+                z-index: 2;
+            }
+            .next-friend {
+                right: 15px;
+                z-index: 1;
+            }
+        }
+    }
+    .schedule {
+        .title {
+            font-size: 12px;
+            font-weight: lighter;
+            text-align: center;
+            background: #eee;
+            line-height: 25px;
+        }
+        .detail {
+            height: 125px;
+            overflow: hidden;
+            position: relative;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            .mask {
+                position: absolute;
+                top: 0;
+                bottom:0;
+                left: 0;
+                right: 0;
+                background: #000;
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+// user-info
+.info {
+    .head-area {
+        padding: 15px 10px;
+        border-bottom: 1px solid #eee;
+        position: relative;
+    }
+    .head-img-wrapper {
+        width: 60px;
+        height: 60px;
+        float: left;
+        border-radius: 50%;
+        border: 1px solid #ddd;
+        overflow: hidden;
+    }
+    .head-img {
+        width: 100%;
+        height: 100%;
+    }
+    .head-area {
+        .name {
+            font-size: 14px;
+            line-height: 62px;
+            margin-left: 10px;
+        }
+        .detail {
+            position: absolute;
+            right: 10px;
+            top: 0;
+            display: block;
+            width: 20px;
+            height: 100%;
+            opacity: 0.8;
+        }
+    }
+    .social-list {
+        padding: 10px 0;
+    }
+    .social-item {
+        width: 33%;
+        float: left;
+        text-align: center;
+        h3 {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 5px;
+        }
+    }
+}

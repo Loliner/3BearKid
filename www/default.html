@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>3BearKid</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1,
+width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" href="css/jquery.mobile.flatui.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/default.css">
+</head>
+
+<body>
+    <div id="pagetwo" data-role="page">
+        <!-- panel -->
+        <div data-role="panel" id="mypanel" data-position="left" data-display="push">
+        </div>
+        <!-- header -->
+        <div id="header" data-role="header" data-position="fixed" data-theme="lolin" class="header">
+            <a href="#mypanel" data-role="none" class="header-btn bars-pos icon-bars-white"></a>
+            <h1 data-theme="lolin">三只熊亲子</h1>
+            <a href="#" data-role="none" class="header-btn plus-pos icon-plus-white"></a>
+        </div>
+        <!-- content -->
+        <div id="content" data-role="content" id="content" class="content">
+            <ul class="content-list">
+                <li id="basic-data" class="content-item active">
+                    <div class="basic-data">
+                        <div class="area-01">
+                            <span class="num">36<span class="minute">分钟</span></span>
+                            <div class="total-training">总共训练</div>
+                            <a href="#" class="total-trainning-btn icon-arrow-right-01-black"></a>
+                        </div>
+                        <ul class="area-02-list clearfix">
+                            <li class="area-02-item item-left">
+                                <div class="name">完成</div>
+                                <div class="count">7<span class="unit">次</span></div>
+                            </li>
+                            <li class="area-02-item item-center">
+                                <div class="name">累计</div>
+                                <div class="count">3<span class="unit">天</span></div>
+                            </li>
+                            <li class="area-02-item item-right">
+                                <div class="name">消耗</div>
+                                <div class="count">99<span class="unit">大卡</span></div>
+                            </li>
+                        </ul>
+                        <div class="area-03 ranking clearfix">
+                            <div class="ranking-text"><span>3</span>本月好友训练排名</div>
+                            <div class="head-img-box prev-friend">
+                                <img src="images/head_01.jpg" alt="" class="head-img">
+                            </div>
+                            <div class="head-img-box me">
+                                <img src="images/head_02.jpg" alt="" class="head-img">
+                            </div>
+                            <div class="head-img-box next-friend">
+                                <img src="images/head_03.jpg" alt="" class="head-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule">
+                        <h1 class="title">我的课程表</h1>
+                        <div class="detail">
+                            <img src="images/activity_01.jpeg" alt="">
+                            <div class="mask"></div>
+                            <div class="content">
+                                <h1>两周</h1>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li id="share" class="content-item">2</li>
+                <li id="info" class="content-item">
+                    <div class="info my-border">
+                        <div class="head-area clearfix">
+                            <div class="head-img-wrapper">
+                                <img class="head-img" src="images/head_01.jpg" alt="">
+                            </div>
+                            <span class="name">3BearKid</span>
+                            <a class="detail icon-carat-r-black" href="#"></a>
+                        </div>
+                        <ul class="social-list clearfix">
+                            <li class="social-item">
+                                <h3>动态</h3><span>15</span></li>
+                            <li class="social-item">
+                                <h3>关注</h3><span>0</span></li>
+                            <li class="social-item">
+                                <h3>粉条</h3><span>86</span></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- footer -->
+        <div id="footer" data-role="footer" data-position="fixed" data-theme="lolin" class="footer">
+            <div data-role="none">
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item"><a href="#basic-data" class="family icon-family active">活动</a></li>
+                    <li class="footer-nav-item"><a href="#share" class="kid icon-kid">动态</a></li>
+                    <li class="footer-nav-item"><a href="#info" class="badge icon-badge">徽章</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.js"></script>
+    <script>
+    (function() {
+        init();
+        footerNavListener();
+    })();
+
+    function init() {
+
+    }
+
+    function footerNavListener() {
+        var footerList = $(".footer-nav-list");
+        var footerBtns = footerList.find("a");
+        var contentAreas = $("#content .content-item");
+        var currentActiveLi = footerList.find("a")[0];
+        console.log(currentActiveLi);
+        footerList.delegate("li", "tap", function(e) {
+            footerBtns.each(function(index, _this) {
+                $(_this).removeClass("active");
+            });
+            var $target = $(e.target);
+            console.log(e.target);
+            $target.addClass("active");
+
+            contentAreas.each(function(index, _this) {
+                $(_this).css("display", "none").removeClass("active");
+            })
+            $($target.attr("href")).fadeIn().addClass("active");
+        })
+    }
+    </script>
+</body>
+
+</html>
