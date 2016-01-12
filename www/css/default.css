@@ -4,10 +4,6 @@
   margin: 0;
   background: #fff;
 }
-#content .content-list {
-  width: 100%;
-  overflow: hidden;
-}
 #content .content-item {
   width: 100%;
   float: left;
@@ -22,7 +18,7 @@
   padding-top: 30px;
 }
 #basic-data .basic-data .area-01 .num {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
   text-align: center;
   position: relative;
@@ -38,16 +34,16 @@
 }
 #basic-data .basic-data .area-01 .total-training {
   position: absolute;
-  top: 0.5em;
+  top: 10px;
   left: 15px;
-  font-size: 13px;
+  font-size: 14px;
 }
 #basic-data .basic-data .area-01 .total-trainning-btn {
   position: absolute;
-  top: 0.5em;
+  top: 10px;
   right: 15px;
-  width: 13px;
-  height: 13px;
+  width: 15px;
+  height: 15px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100% 100%;
@@ -61,7 +57,7 @@
   float: left;
 }
 #basic-data .basic-data .area-02-list .area-02-item .name {
-  font-size: 10px;
+  font-size: 11px;
   margin-bottom: 5px;
 }
 #basic-data .basic-data .area-02-list .area-02-item .count {
@@ -82,7 +78,7 @@
 }
 #basic-data .basic-data .area-03 {
   border-top: 1px solid #eee;
-  height: 50px;
+  height: 60px;
   position: relative;
 }
 #basic-data .basic-data .area-03 .ranking-text {
@@ -133,7 +129,7 @@
   line-height: 25px;
 }
 #basic-data .schedule .detail {
-  height: 125px;
+  height: 150px;
   overflow: hidden;
   position: relative;
 }
@@ -147,8 +143,77 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: #000;
-  opacity: 0.5;
+  z-index: 0;
+  background: url('../images/black-opacity50.png') repeat 0 0;
+}
+#basic-data .schedule .detail .content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  color: #fff;
+  padding: 15px;
+}
+#basic-data .schedule .detail .content h1 {
+  font-size: 24px;
+  font-weight: lighter;
+}
+#basic-data .schedule .detail .content h2 {
+  font-size: 15px;
+  font-weight: lighter;
+  margin-top: 8px;
+}
+#basic-data .schedule .detail .content h2 span {
+  margin: 0 10px;
+}
+#basic-data .schedule .detail .content .progress-text {
+  font-size: 10px;
+  margin-top: 30px;
+  font-weight: lighter;
+}
+#basic-data .schedule .detail .content .progress-bar {
+  height: 8px;
+  background: url('../images/white-opacity50.png') repeat 0 0;
+}
+#basic-data .schedule .detail .content .progress-bar .progress-finish {
+  width: 34%;
+  height: 100%;
+  background: #00CC00;
+}
+#basic-data .traning .title {
+  font-size: 12px;
+  font-weight: lighter;
+  text-align: center;
+  background: #eee;
+  line-height: 25px;
+}
+#basic-data .traning .traning-list {
+  padding: 0 20px;
+  border-bottom: 1px solid #eee;
+}
+#basic-data .traning .traning-list .traning-item {
+  padding: 20px 0 10px 0;
+  border-bottom: 1px solid #eee;
+}
+#basic-data .traning .traning-list .traning-item h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+#basic-data .traning .traning-list .traning-item span {
+  font-size: 12px;
+  height: 12px;
+  line-height: 12px;
+  display: block;
+  float: left;
+  background-repeat: no-repeat;
+  background-position: -20px center;
+  background-size: 100% 100%;
+  padding-left: 25px;
+}
+#basic-data .traning .traning-list .traning-item:last-of-type {
+  border: none;
 }
 .info .head-area {
   padding: 15px 10px;

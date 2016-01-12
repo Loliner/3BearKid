@@ -23,7 +23,7 @@ width=device-width, height=device-height, target-densitydpi=device-dpi" />
             <a href="#" data-role="none" class="header-btn plus-pos icon-plus-white"></a>
         </div>
         <!-- content -->
-        <div id="content" data-role="content" id="content" class="content">
+        <div id="content" data-role="content">
             <ul class="content-list">
                 <li id="basic-data" class="content-item active">
                     <div class="basic-data">
@@ -65,9 +65,31 @@ width=device-width, height=device-height, target-densitydpi=device-dpi" />
                             <img src="images/activity_01.jpeg" alt="">
                             <div class="mask"></div>
                             <div class="content">
-                                <h1>两周</h1>
+                                <h1>两周减脂课程表</h1>
+                                <h2>第3/14天<span>休息日</span></h2>
+                                <div class="progress-text">完成34%</div>
+                                <div class="progress-bar">
+                                    <div class="progress-finish"></div>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="traning">
+                        <h1 class="title">我的训练</h1>
+                        <ul class="traning-list">
+                            <li class="traning-item clearfix">
+                                <h2>俯卧撑入门</h2>
+                                <span class="icon-correct">已参加</span>
+                            </li>
+                            <li class="traning-item clearfix">
+                                <h2>俯卧撑入门</h2>
+                                <span class="icon-correct">已参加</span>
+                            </li>
+                            <li class="traning-item clearfix">
+                                <h2>俯卧撑入门</h2>
+                                <span class="icon-correct">已参加</span>
+                            </li>
+                        </ul>
                     </div>
                 </li>
                 <li id="share" class="content-item">2</li>
@@ -102,40 +124,13 @@ width=device-width, height=device-height, target-densitydpi=device-dpi" />
                 </ul>
             </div>
         </div>
+        <script src="js/default.js"></script>
+        <script>
+        defaultPageInit();
+        </script>
     </div>
     <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/jquery.mobile-1.4.5.js"></script>
-    <script>
-    (function() {
-        init();
-        footerNavListener();
-    })();
-
-    function init() {
-
-    }
-
-    function footerNavListener() {
-        var footerList = $(".footer-nav-list");
-        var footerBtns = footerList.find("a");
-        var contentAreas = $("#content .content-item");
-        var currentActiveLi = footerList.find("a")[0];
-        console.log(currentActiveLi);
-        footerList.delegate("li", "tap", function(e) {
-            footerBtns.each(function(index, _this) {
-                $(_this).removeClass("active");
-            });
-            var $target = $(e.target);
-            console.log(e.target);
-            $target.addClass("active");
-
-            contentAreas.each(function(index, _this) {
-                $(_this).css("display", "none").removeClass("active");
-            })
-            $($target.attr("href")).fadeIn().addClass("active");
-        })
-    }
-    </script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
 </body>
 
 </html>

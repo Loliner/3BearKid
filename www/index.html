@@ -9,6 +9,8 @@ width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <link rel="stylesheet" href="css/jquery.mobile.flatui.css">
     <link rel="stylesheet" href="css/public.css">
     <link rel="stylesheet" href="css/index.css">
+    <!-- 先将下一个页面的css加载出来 -->
+    <link rel="stylesheet" href="css/default.css">
 </head>
 
 <body>
@@ -16,16 +18,20 @@ width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <img id="init-img" src="images/init-img.jpg" alt="">
     </div>
     <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/jquery.mobile-1.4.5.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
     <script>
+    // 此处跳转到的default.html只加载data-role="page"的div中的内容
     $(window).on("pagebeforecreate", function(event) {
         setTimeout(function() {
             $.mobile.changePage("default.html", {
-                transition: "fade"
+                transition: "fade",
+                changeHash: false       //不往历史记录中添加该条操作，防止按返回键可以返回到初始页面
             });
-        }, 3000);
+        }, 1000);
     });
     </script>
+    <!-- 先将下一个页面的js加载出来 -->
+    <script src="js/default.js"></script>
 </body>
 
 </html>
