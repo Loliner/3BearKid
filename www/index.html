@@ -21,14 +21,14 @@ width=device-width, height=device-height" />
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
     <script>
     // 此处跳转到的default.html只加载data-role="page"的div中的内容
-    $(window).on("pagebeforecreate", function(event) {
-        setTimeout(function() {
-            $.mobile.changePage("default.html", {
-                transition: "fade",
-                changeHash: false       //不往历史记录中添加该条操作，防止按返回键可以返回到初始页面
-            });
-        }, 1000);
-    });
+    // $(window).on("pagebeforecreate", function(event) {
+    //     setTimeout(function() {
+    //         $.mobile.changePage("default.html", {
+    //             transition: "fade",
+    //             changeHash: false       //不往历史记录中添加该条操作，防止按返回键可以返回到初始页面
+    //         });
+    //     }, 1000);
+    // });
     </script>
     <!-- 先将下一个页面的js加载出来 -->
     <script src="js/default.js"></script>
